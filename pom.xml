@@ -23,6 +23,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
+    	<thymeleaf-layout-dialect.version>2.0.4</thymeleaf-layout-dialect.version>
 	</properties>
 
 	<dependencies>
@@ -30,6 +32,30 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        
+        <!-- thymeleaf插件 -->
+	    <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+	        <version>1.5.3.RELEASE</version>
+	    </dependency>
+        
+        <dependency> <!-- 引入log4j2依赖 -->  
+	        <groupId>org.springframework.boot</groupId>  
+	        <artifactId>spring-boot-starter-log4j2</artifactId>  
+	    </dependency>
+		
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
@@ -47,6 +73,7 @@
             <artifactId>druid</artifactId>
             <version>1.0.18</version>
         </dependency>
+        
 
 		<dependency>
 			<groupId>mysql</groupId>

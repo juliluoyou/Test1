@@ -63,7 +63,8 @@
         <logger name="cn.com.baseos" level="DEBUG" additivity="false">  
             <appender-ref ref="console" />  
             <appender-ref ref="file" />  
-        </logger>  
+        </logger>
+        <logger name="com.sun" level="debug" />
         <!-- root logger,一般用于放置所有的appender -->  
         <root level="DEBUG">  
             <appender-ref ref="console" />  
